@@ -1,0 +1,18 @@
+
+==============================================
+START : FUNC_BUILD_KERNEL
+==============================================
+
+build project=keur
+build common config=msm8976_sec_defconfig 
+build variant config=msm8976_sec_gts28vewifi_eur_defconfig 
+build secure option= 
+build SEANDROID option= 
+build selinux defconfig=selinux_defconfig 
+build selinux log defconfig=selinux_log_defconfig 
+build tima defconfig= 
+no directory : /home/ryan/kernel_gts28ve-gts210ve/../../android/out/target/product/gts28vewifi/obj/KERNEL_OBJ/arch/arm64/boot/dts
+make: Entering directory '/home/ryan/kernel_gts28ve-gts210ve'
+/bin/sh: 1: cd: can't cd to /home/ryan/kernel_gts28ve-gts210ve/../../android/out/target/product/gts28vewifi/obj/KERNEL_OBJ
+Makefile:121: *** output directory "/home/ryan/kernel_gts28ve-gts210ve/../../android/out/target/product/gts28vewifi/obj/KERNEL_OBJ" does not exist.  Stop.
+make: Leaving directory '/home/ryan/kernel_gts28ve-gts210ve'

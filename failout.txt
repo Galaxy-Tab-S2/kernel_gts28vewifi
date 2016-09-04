@@ -1,0 +1,29 @@
+KCONFIG_SELINUX(arch/arm64/configs/selinux_defconfig)
+KCONFIG_LOG_SELINUX(arch/arm64/configs/selinux_log_defconfig)
+KCONFIG_TIMA((null))
+KCONFIG_DMVERITY((null))
+KCONFIG_VARIANT(arch/arm64/configs/msm8976_sec_gts28vewifi_eur_defconfig)
+KCONFIG_DEBUG((null))
+#
+# configuration written to .config
+#
+DTB combiner:
+  Input directory: 'arch/arm/boot/dts/'
+  Output file: 'arch/arm64/boot/dt.img'
+Found file: msm8976-sec-gts28vewifi-eur-r00.dtb ... 
+Version:1
+... skip, incorrect 'qcom,msm-id = <' format
+skip, failed to scan for 'qcom,msm-id = <' tag
+Found file: msm8976-sec-gts28vewifi-eur-r05.dtb ... 
+Version:1
+... skip, incorrect 'qcom,msm-id = <' format
+skip, failed to scan for 'qcom,msm-id = <' tag
+Found file: msm8976-sec-gts28vewifi-eur-r01.dtb ... 
+Version:1
+... skip, incorrect 'qcom,msm-id = <' format
+skip, failed to scan for 'qcom,msm-id = <' tag
+Found file: msm8976-sec-gts28vewifi-eur-r04.dtb ... 
+Version:1
+... skip, incorrect 'qcom,msm-id = <' format
+skip, failed to scan for 'qcom,msm-id = <' tag
+=> Found 0 unique DTB(s)
