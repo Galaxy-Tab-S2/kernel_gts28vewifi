@@ -9,3 +9,5 @@ Also, these commands are useful:
 export CROSS_COMPILE=[your toolchain]
 export ARCH=arm64
 
+Lightn1ng
+CTXz
