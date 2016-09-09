@@ -3020,6 +3020,14 @@ static int check_modinfo(struct module *mod, struct load_info *info, int flags)
 	} else if (!same_magic(modmagic, vermagic, info->index.vers)) {
 		printk(KERN_ERR "%s: module magic mismatch: modmagic '%s' should be vermagic '%s'\n",
 		       mod->name, modmagic, vermagic);
+	if(strcomp(mod->name, "wlan") != 0)
+	{
+		/* Let's not return -ENOEXEC... */
+		printk(KERN_WARNING "%s: Not returning ENOEXEC /n",
+		mod->name);
+	}
+		printk(KERN_WARNING "%s: Returning ENOEXEC /n",
+		mod->name);
 		return -ENOEXEC;
 	}
 
