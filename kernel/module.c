@@ -1273,7 +1273,7 @@ static int check_version(Elf_Shdr *sechdrs,
 			return 1;
 		pr_debug("Found checksum %lX vs module %lX\n",
 		       maybe_relocated(*crc, crc_owner), versions[i].crc);
-		printk(KERN_WARNING "%s: Version checksum %lX does not match requested checksum %lX", mod->name, versions[i].crc, maybe_relocated(*crc, crc_owner) );
+		printk(KERN_WARNING "%s: Module checksum %lX does not match requested checksum %lX", mod->name, versions[i].crc, maybe_relocated(*crc, crc_owner) );
 		goto bad_version;
 	}
 
@@ -3018,7 +3018,7 @@ static int check_modinfo(struct module *mod, struct load_info *info, int flags)
 		if (err)
 			return err;
 	} else if (!same_magic(modmagic, vermagic, info->index.vers)) {
-		printk(KERN_ERR "%s: version magic '%s' should be '%s'\n",
+		printk(KERN_ERR "%s: module magic mismatch: modmagic '%s' should be vermagic '%s'\n",
 		       mod->name, modmagic, vermagic);
 		return -ENOEXEC;
 	}
