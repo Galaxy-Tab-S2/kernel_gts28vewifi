@@ -3026,9 +3026,12 @@ static int check_modinfo(struct module *mod, struct load_info *info, int flags)
 		printk(KERN_WARNING "%s: Not returning ENOEXEC /n",
 		mod->name);
 	}
+	else
+	{
 		printk(KERN_WARNING "%s: Returning ENOEXEC /n",
 		mod->name);
-		return -ENOEXEC;
+		return -ENOEXEC;	
+	}
 	}
 
 	if (!get_modinfo(info, "intree"))
