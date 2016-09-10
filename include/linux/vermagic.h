@@ -19,7 +19,11 @@
 #ifdef CONFIG_MODVERSIONS
 #define MODULE_VERMAGIC_MODVERSIONS "modversions "
 #else
+#ifdef CONFIG_FAKE_MODVERSIONS
+#define MODULE_VERMAGIC_MODVERSIONS "modversions "
+#else
 #define MODULE_VERMAGIC_MODVERSIONS ""
+#endif
 #endif
 #ifndef MODULE_ARCH_VERMAGIC
 #define MODULE_ARCH_VERMAGIC ""
