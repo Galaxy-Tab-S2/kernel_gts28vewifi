@@ -3018,7 +3018,6 @@ static int check_modinfo(struct module *mod, struct load_info *info, int flags)
 		if (err)
 			return err;
 	} else if (!same_magic(modmagic, vermagic, info->index.vers)) {
-		panic("OH NOES WHAT DID I DO WITH MY CAR KEYS??????\n");
 		printk(KERN_ERR "%s: module magic mismatch: modmagic '%s' should be vermagic '%s'\n",
 		       mod->name, modmagic, vermagic);
 		return -ENOEXEC;
